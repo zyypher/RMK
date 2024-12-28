@@ -1,34 +1,34 @@
-import Layout from "../components/Layout/Layout";
-import Preloader from "../components/headers/Preloader/Preloader";
-import About from "../components/modules/Home/About";
-import BannerContent from "../components/modules/Home/BannerContent";
-import Blog from "../components/modules/Home/Blog";
-import Categories from "../components/modules/Home/Categories";
-import CommunityLearning from "../components/modules/Home/CommunityLearning";
-import MeetOurExpert from "../components/modules/Home/MeetOurExpert";
-import OurSuccessStory from "../components/modules/Home/OurSuccessStory";
-import Partners from "../components/modules/Home/Partners";
-import PopularCourse from "../components/modules/Home/PopularCourse";
-import Testimonials from "../components/modules/Home/Testimonials";
-import Newsletter from "../components/modules/newsletter/Newsletter";
-export default function Home() {
 
+import Footerthree from '../components/footers/Footerthree'
+import Headerthree from '../components/headers/Headerthree'
+import Preloader from '../components/headers/Preloader/Preloader'
+import Categories from '../components/modules/Home3/Categories'
+import BannerContent from '../components/modules/Home3/BannerContent'
+import Partners from '../components/modules/Home3/Partners'
+import PopularCourse from '../components/modules/Home3/PopularCourse'
+import CounterThree from '../components/modules/Home3/CounterThree'
+import About from '../components/modules/Home3/About'
+import ExpertMentors from '../components/modules/Home3/ExpertMentors'
+import Blogs from '../components/modules/Home3/Blogs'
+import Students from '../components/modules/Home3/Students'
+
+export default function Home() {
   return (
     <>
-      <Layout>
-        <Preloader />
-        <BannerContent />
-        <Categories />
-        <About />
-       <PopularCourse title="Our Most Popular Courses" /> 
-        <OurSuccessStory />
-        <MeetOurExpert />
-        <CommunityLearning />
-        <Testimonials />
-        <Blog />
-        <Partners />
-        <Newsletter  title="Get free Pro memberships for your high school class"/>
-      </Layout>
+      <Preloader className={"preloader--style3"} />
+      <Headerthree />
+      <BannerContent />
+      <Partners />
+      <Categories />
+      <About />
+      <PopularCourse />
+      <CounterThree />
+      <ExpertMentors />
+      <Students />
+      <Blogs />
+      <Footerthree />
     </>
-  );
+  )
 }
+
+

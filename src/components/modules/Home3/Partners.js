@@ -2,52 +2,44 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 const partnerThree = [
-  {
-    "img": "/images/partner/home3/1.png"
-  },
-  {
-    "img": "/images/partner/home3/2.png"
-  },
-  {
-    "img": "/images/partner/home3/3.png"
-  },
-  {
-    "img": "/images/partner/home3/4.png"
-  },
-  {
-    "img": "/images/partner/home3/5.png"
-  },
-  {
-    "img": "/images/partner/home3/1.png"
-  },
-  {
-    "img": "/images/partner/home3/2.png"
-  },
-  {
-    "img": "/images/partner/home3/3.png"
-  },
-  {
-    "img": "/images/partner/home3/4.png"
-  },
-  {
-    "img": "/images/partner/home3/5.png"
-  },
-  {
-    "img": "/images/partner/home3/1.png"
-  },
-  {
-    "img": "/images/partner/home3/2.png"
-  },
-  {
-    "img": "/images/partner/home3/3.png"
-  },
-  {
-    "img": "/images/partner/home3/4.png"
-  },
-  {
-    "img": "/images/partner/home3/5.png"
-  }
-]
+  { "img": "/images/partners/image1.jpeg" },
+  { "img": "/images/partners/image2.png" },
+  { "img": "/images/partners/image3.png" },
+  { "img": "/images/partners/image4.png" },
+  { "img": "/images/partners/image5.png" },
+  { "img": "/images/partners/image6.png" },
+  { "img": "/images/partners/image7.png" },
+  { "img": "/images/partners/image8.png" },
+  { "img": "/images/partners/image9.png" },
+  { "img": "/images/partners/image10.jpeg" },
+  { "img": "/images/partners/image11.jpeg" },
+  { "img": "/images/partners/image12.png" },
+  { "img": "/images/partners/image13.png" },
+  { "img": "/images/partners/image14.png" },
+  { "img": "/images/partners/image15.png" },
+  { "img": "/images/partners/image16.jpeg" },
+  { "img": "/images/partners/image17.jpeg" },
+  { "img": "/images/partners/image18.png" },
+  { "img": "/images/partners/image19.png" },
+  { "img": "/images/partners/image20.png" },
+  { "img": "/images/partners/image21.png" },
+  { "img": "/images/partners/image22.png" },
+  { "img": "/images/partners/image23.png" },
+  { "img": "/images/partners/image24.png" },
+  { "img": "/images/partners/image25.png" },
+  { "img": "/images/partners/image26.png" },
+  { "img": "/images/partners/image27.png" },
+  { "img": "/images/partners/image28.png" },
+  { "img": "/images/partners/image29.png" },
+  { "img": "/images/partners/image30.png" },
+  { "img": "/images/partners/image31.png" },
+  { "img": "/images/partners/image32.png" },
+  { "img": "/images/partners/image33.png" },
+  { "img": "/images/partners/image34.png" },
+  { "img": "/images/partners/image35.png" },
+  { "img": "/images/partners/image36.png" }
+];
+
 const Partners = () => {
   const breakpoints = {
     320: {
@@ -78,7 +70,7 @@ const Partners = () => {
       <section className='partner partner--style2 aos-init aos-animate' data-aos="fade-up" data-aos-duration="800">
         <div className='container aos-init aos-animate' data-aos='fade-up' data-aos-duration="1000" data-aos-delay='100'>
           <div className="section-header text-center">
-            <h6>Trusted by 4,000+ companies</h6>
+            <h6>Trusted by 50+ companies</h6>
           </div>
           <div className="partner__wrapper">
             <Swiper className="partner__slider"

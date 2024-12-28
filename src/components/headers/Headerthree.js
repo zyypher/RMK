@@ -69,7 +69,7 @@ const Headerthree = () => {
   };
   return (
     <>
-    <div className="searchbar">
+      <div className="searchbar">
         <div className="searchbar__wrapper">
           <div className="searchbar__inner">
             <form className="form form-subscribe">
@@ -93,9 +93,8 @@ const Headerthree = () => {
         </div>
       </div>
       <header
-        className={`header-section home3 ${
-          scrollPosition > 100 ? "header-fixed fadeInUp" : ""
-        }`}
+        className={`header-section home3 ${scrollPosition > 100 ? "header-fixed fadeInUp" : ""
+          }`}
       >
         <div className="header-bottom">
           <div className="container">
@@ -103,18 +102,16 @@ const Headerthree = () => {
               <div className="header-start header-start--style2">
                 <div className="logo">
                   <Link href="">
-                    
-                      <img src="/images/logo/3.png" alt="logo" />
-                    
+                    <img src="/images/logo/rmk-logo.png" alt="logo" style={{ width: '200px' }} />
                   </Link>
                 </div>
                 <div className="menu-area">
                   <ul className={`menu menu--style2 ${activeMenu ? "active" : ""}`}>
                     <li>
                       <Link href="" onClick={toggleActive}>
-                        Homes
+                        Home
                       </Link>
-                      <ul className="submenu">
+                      {/* <ul className="submenu">
                         <li>
                           <Link href="/">Home 1</Link>
                         </li>
@@ -127,7 +124,7 @@ const Headerthree = () => {
                         <li>
                           <Link href="/index4">Home 4</Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li>
                       <Link href="" onClick={toggleActive}>
@@ -176,8 +173,8 @@ const Headerthree = () => {
                           <Link href="/about">About Us</Link>
                         </li>
                         <li>
-                        <Link href="/gallery">Gallery</Link>
-                      </li>
+                          <Link href="/gallery">Gallery</Link>
+                        </li>
                         <li>
                           <Link href="/cart">Cart</Link>
                         </li>
@@ -239,7 +236,7 @@ const Headerthree = () => {
         </div>
       </header>
 
-      
+
     </>
   );
 };
