@@ -4,27 +4,27 @@ import Link from 'next/link'
 const categoryListThree = [
     {
         "icon": "https://thetork.com/demos/vue/educax/images/category/home3/1.png",
-        "title": "Business"
+        "title": "Food Safety"
     },
     {
         "icon": "https://thetork.com/demos/vue/educax/images/category/home3/2.png",
-        "title": "English"
+        "title": "Health & Safety"
     },
     {
         "icon": "https://thetork.com/demos/vue/educax/images/category/home3/3.png",
-        "title": "Finance"
+        "title": "Pest Control"
     },
     {
         "icon": "https://thetork.com/demos/vue/educax/images/category/home3/4.png",
-        "title": "Content Writing"
+        "title": "HACCP & ISO Standards"
     },
     {
         "icon": "https://thetork.com/demos/vue/educax/images/category/home3/5.png",
-        "title": "Development"
+        "title": "First Aid"
     },
     {
         "icon": "https://thetork.com/demos/vue/educax/images/category/home3/6.png",
-        "title": "Art & Design"
+        "title": "Consultancy & Audits"
     }
 ]
 const Categories = () => {
@@ -41,10 +41,9 @@ const Categories = () => {
                                         <p className="mb-0">Courses Details</p>
                                     </div>
                                     <h2>Explore Our Categories</h2>
-                                    <p className="style3">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                                        Velit officia consequat duis enim velit mollit.</p>
+                                    <p className="style3">Discover a wide range of professional training courses designed to meet your needs. From food safety to health and safety, find the perfect program to elevate your skills and career.</p>
 
-                                    <Link href="/course-category" className="trk-btn trk-btn--secondary3"> All
+                                    <Link href="/courses" className="trk-btn trk-btn--secondary3"> All
                                         Categories <span> <FontAwesomeIcon icon={faArrowRight} /></span> </Link>
                                 </div>
 
