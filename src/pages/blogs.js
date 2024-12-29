@@ -24,7 +24,7 @@ const Blogs = () => {
       <PageHeader
         title="Blogs"
         subtitle="Blogs"
-        image='images/bg/home1/4.png'
+        image='images/new/blog-banner.png'
       />
       
       <section
