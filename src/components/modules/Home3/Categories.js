@@ -3,27 +3,27 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 const categoryListThree = [
     {
-        "icon": "https://thetork.com/demos/vue/educax/images/category/home3/1.png",
+        "icon": "/images/new/food-and-safety.webp",
         "title": "Food Safety"
     },
     {
-        "icon": "https://thetork.com/demos/vue/educax/images/category/home3/2.png",
+        "icon": "/images/new/health-and-safety.webp",
         "title": "Health & Safety"
     },
     {
-        "icon": "https://thetork.com/demos/vue/educax/images/category/home3/3.png",
+        "icon": "/images/new/pest-control.webp",
         "title": "Pest Control"
     },
     {
-        "icon": "https://thetork.com/demos/vue/educax/images/category/home3/4.png",
+        "icon": "/images/new/haccp.webp",
         "title": "HACCP & ISO Standards"
     },
     {
-        "icon": "https://thetork.com/demos/vue/educax/images/category/home3/5.png",
+        "icon": "/images/new/first-aid.webp",
         "title": "First Aid"
     },
     {
-        "icon": "https://thetork.com/demos/vue/educax/images/category/home3/6.png",
+        "icon": "/images/new/consultancy.webp",
         "title": "Consultancy & Audits"
     }
 ]
@@ -54,10 +54,13 @@ const Categories = () => {
                                         <div className="categories__item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                                             <div className="categories__item-inner">
                                                 <div className="categories__item-thumb">
-                                                    <img src={item.icon} alt="course icon" />
+                                                    <img src={item.icon} alt="course icon" style={{
+                                                        width: "312px",
+                                                        height: "266px"
+                                                    }} />
                                                 </div>
                                                 <div className="categories__item-content">
-                                                    <div className="stretched-link active" style={{ fontWeight: 600}}>{item.title}</div>
+                                                    <div className="stretched-link active" style={{ fontWeight: 600 }}>{item.title}</div>
                                                 </div>
                                             </div>
                                         </div>
