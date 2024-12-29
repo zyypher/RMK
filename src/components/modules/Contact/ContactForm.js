@@ -3,7 +3,7 @@ const ContactForm = () => {
   return (
 <div className=" contact__form">
         <h3>Ready To Get Started?</h3>
-        <p>You email address will not be published. Required fields are marked.</p>
+        <p>Have questions or need assistance? Share your details, and our team will reach out to you shortly. We're here to help you every step of the way!</p>
         <form action="" className="account__form">
             <div className="row g-4">
                 <div className="col-lg-12">
