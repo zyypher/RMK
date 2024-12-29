@@ -1,69 +1,118 @@
-import Link from 'next/link'
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+// Define validation schema
+const validationSchema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  email: yup.string().email("Invalid email address").required("Email is required"),
+  phone: yup
+    .string()
+    .matches(/^\d+$/, "Phone number must be numeric")
+    .required("Phone number is required"),
+  message: yup.string().required("Message is required"),
+});
+
 const ContactForm = () => {
+  const [formStatus, setFormStatus] = useState(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setFormStatus("success");
+        reset();
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      setFormStatus("error");
+    }
+  };
+
   return (
-<div className=" contact__form">
-        <h3>Ready To Get Started?</h3>
-        <p>Have questions or need assistance? Share your details, and our team will reach out to you shortly. We're here to help you every step of the way!</p>
-        <form action="" className="account__form">
-            <div className="row g-4">
-                <div className="col-lg-12">
-                    <div className="input-group">
-                        <input type="text" className="form-control" id="account-name" placeholder="Jhon Doe" required/>
-                        <div className="valid-tooltip">
-                            Looks good!
-                        </div>
-                        <div className="invalid-tooltip">
-                            Please enter a full name
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-12">
-                    <div className="input-group">
-                        <input type="email" className="form-control" id="account-email" placeholder="Email" required/>
-                        <div className="valid-tooltip">
-                            This email is valid
-                        </div>
-                        <div className="invalid-tooltip">
-                            Please enter a valid email
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-12">
-                    <div className="input-group">
-                        <input type="number" className="form-control" id="account-mobile" placeholder="Enter number" required/>
-                        <div className="valid-tooltip">
-                            This mobile is valid
-                        </div>
-                        <div className="invalid-tooltip">
-                            Please enter a valid number
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-lg-12">
-                    <div className="input-group">
-                        <textarea id="account-desc" className="form-control" rows="4" placeholder="Write a message..."
-                            cols="50"></textarea>
-                    </div>
-                </div>
+    <div className="contact__form">
+      <h3>Let’s Connect and Get Started</h3>
+      <p>
+        Have questions or need assistance? Share your details, and our team will reach out to you
+        shortly. We're here to help you every step of the way!
+      </p>
+      <form onSubmit={handleSubmit(onSubmit)} className="account__form">
+        <div className="row g-4">
+          <div className="col-lg-12">
+            <div className="input-group">
+              <input
+                type="text"
+                className={`form-control ${errors.name ? "is-invalid" : ""}`}
+                placeholder="John Doe"
+                {...register("name")}
+              />
+              {errors.name && <div className="invalid-tooltip">{errors.name.message}</div>}
             </div>
-
-            <div className="account__form-passcheck">
-                <div className="form-check">
-                    <input type="checkbox" className="form-check-input" value="" id="terms-check"/>
-                    <label htmlFor="terms-check" className="form-check-label">Accept <Link href=""> terms
-                        </Link> and <Link href=""> privacy
-                            policy</Link>.
-                    </label>
-                </div>
+          </div>
+          <div className="col-lg-12">
+            <div className="input-group">
+              <input
+                type="email"
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                placeholder="Email"
+                {...register("email")}
+              />
+              {errors.email && <div className="invalid-tooltip">{errors.email.message}</div>}
             </div>
+          </div>
+          <div className="col-lg-12">
+            <div className="input-group">
+              <input
+                type="text"
+                className={`form-control ${errors.phone ? "is-invalid" : ""}`}
+                placeholder="Enter number"
+                {...register("phone")}
+              />
+              {errors.phone && <div className="invalid-tooltip">{errors.phone.message}</div>}
+            </div>
+          </div>
+          <div className="col-lg-12">
+            <div className="input-group">
+              <textarea
+                className={`form-control ${errors.message ? "is-invalid" : ""}`}
+                rows="4"
+                placeholder="Write a message..."
+                {...register("message")}
+              ></textarea>
+              {errors.message && <div className="invalid-tooltip">{errors.message.message}</div>}
+            </div>
+          </div>
+        </div>
+        <button type="submit" className="trk-btn trk-btn--rounded trk-btn--secondary1" style={{ marginTop: '2rem'}}>
+          Send Message
+        </button>
+      </form>
 
-            <button type="submit" className="trk-btn trk-btn--rounded trk-btn--secondary1">Send
-                Message</button>
-        </form>
+      {formStatus === "success" && (
+        <div className="alert alert-success mt-3">Message sent successfully!</div>
+      )}
+      {formStatus === "error" && (
+        <div className="alert alert-danger mt-3">Something went wrong. Please try again.</div>
+      )}
     </div>
+  );
+};
 
-  )
-}
-
-export default ContactForm
+export default ContactForm;
