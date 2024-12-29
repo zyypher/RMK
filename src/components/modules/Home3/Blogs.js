@@ -30,11 +30,8 @@ const Blogs = () => {
             <img src="/images/icon/home3/1.png" alt="roket icon" />
             <p className="mb-0">Latest Blog</p>
           </div>
-          <h2>Every Day, Read Our News & Blog.</h2>
-          <p className="style2">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam.
+          <h2>Stay Informed with Industry Insights</h2>
+          <p className="style2">Explore expert articles, updates, and tips on Food Safety, Health & Safety, and ISO certifications. Gain valuable knowledge to enhance compliance, productivity, and excellence in your business.
           </p>
         </div>
         <div className="blog__wrapper">

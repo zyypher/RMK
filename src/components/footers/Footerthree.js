@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from "react-scroll-to-top";
 const Footerthree = () => {
     return (<>
         <footer className="footer brand-3 bg--cover" style={{ backgroundImage: 'url(/images/footer/home3/bg.png)' }}>
             <div className="container">
                 <div className="footer__wrapper">
-                    <div className="footer__upper padding-top" data-aos="fade-up" data-aos-duration="800">
+                    {/* <div className="footer__upper padding-top" data-aos="fade-up" data-aos-duration="800">
                         <div className="row g-5 align-items-center">
                             <div className="col-lg-7 col-md-6">
                                 <div className="footer__cta">
@@ -36,18 +36,14 @@ const Footerthree = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="footer__top padding-bottom footer__top--style2">
                         <div className="row g-5">
                             <div className="col-xl-4 col-md-6">
                                 <div className="footer__about">
                                     <Link href="/" className="footer__about-logo"><img
-                                        src="/images/logo/22.png" alt="Logo" /></Link>
-                                    <p className="footer__about-moto">You minim mollit non deserunt ullamco est sit aliqua dolor
-                                        do
-                                        amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
-                                        consequat
-                                        sunt nostrud amet.</p>
+                                        src="/images/logo/rmk-logo.png" alt="Logo" style={{ width: '200px' }} /></Link>
+                                    <p className="footer__about-moto">Empowering excellence through industry-leading training and consultancy services. With over 20 years of experience, we specialize in Food Safety, Health & Safety, and ISO certifications, delivering customized solutions for businesses across the UAE and beyond.</p>
                                 </div>
                             </div>
                             <div className="col-xl-2 col-md-6 col-sm-6">
@@ -87,7 +83,7 @@ const Footerthree = () => {
                                                 <div className="footer__about-inner">
                                                     <img src="/images/footer/2.svg" alt="icon" />
                                                     <div className="info"> <Link
-                                                        href="mailto:support@thetork.com">support@thetork.com</Link>
+                                                        href="mailto:hello@rmkexperts.com">hello@rmkexperts.com</Link>
                                                     </div>
                                                 </div>
                                             </li>
@@ -95,16 +91,16 @@ const Footerthree = () => {
                                             <li className="footer__about-item">
                                                 <div className="footer__about-inner">
                                                     <img src="/images/footer/3.svg" alt="icon" />
-                                                    <div className="info"> <Link href="tel:+2075550119">(207) 555-0119</Link>
+                                                    <div className="info"> <Link href="tel:+97143806674">+971 4 380 6674</Link>
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                         <ul className="social social--style2 mt-4">
                                             <li className="social__item">
-                                                <Link href="" className="social__link social__link--defult"><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                                <Link href="" className="social__link social__link--defult" ><FontAwesomeIcon icon={faLinkedin} /></Link>
                                             </li>
-                                            <li className="social__item">
+                                            {/* <li className="social__item">
                                                 <Link href="" className="social__link social__link--defult"><FontAwesomeIcon icon={faInstagram} /></Link>
                                             </li>
                                             <li className="social__item">
@@ -112,7 +108,7 @@ const Footerthree = () => {
                                             </li>
                                             <li className="social__item">
                                                 <Link href="" className="social__link social__link--defult"><FontAwesomeIcon icon={faTwitter} /></Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </div>
                                 </div>
@@ -158,7 +154,7 @@ const Footerthree = () => {
             </div>
             <div className="footer__lower ">
                 <div className="footer__lower-copyright text-center">
-                    <p className=" mb-0">Copyright @ 2024 By Thetork. All Right Reserved. </p>
+                    <p className=" mb-0">Copyright @ 2025 By RMK Experts. All Right Reserved. </p>
                 </div>
             </div>
         </footer>

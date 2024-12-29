@@ -23,8 +23,8 @@ export default function Home() {
       <About />
       <PopularCourse />
       <CounterThree />
-      <ExpertMentors />
-      <Students />
+      {/* <ExpertMentors /> */}
+      {/* <Students /> */}
       <Blogs />
       <Footerthree />
     </>
