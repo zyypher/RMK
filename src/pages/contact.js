@@ -63,7 +63,7 @@ const Contact = () => {
       </div>
       <MapLink locations={locations} selectedLocation={selectedLocation} />
 
-      <Newsletter title="Get free Pro memberships for your high school class" />
+      <Newsletter title="Reach Out for Expert Guidance Today" />
 
       <Footer />
     </>

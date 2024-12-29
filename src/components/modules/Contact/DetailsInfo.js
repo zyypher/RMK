@@ -8,7 +8,7 @@ const DetailsInfo = ({ locations, selectedLocation, setSelectedLocation }) => {
   return (
     <div>
       <div className="contact__details">
-        <div className="contact__header">
+        <div className="contact__header" style={{marginBottom: '2rem'}}>
           <h3>Always Here to Help You</h3>
           <p>
           Choose your nearest location from the dropdown to access tailored contact details and navigate to our office with ease.
@@ -20,6 +20,10 @@ const DetailsInfo = ({ locations, selectedLocation, setSelectedLocation }) => {
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
             className="form-select"
+            style={{
+              height: "58px",
+              marginBottom: "3rem"
+            }}
           >
             {Object.keys(locations).map((loc) => (
               <option key={loc} value={loc}>

@@ -9,9 +9,9 @@ const CourseCard = ({ courseDetails }) => {
       <div className="course__item-inner">
         <div className="course__thumb">
           <img src={courseDetails.thumbnail} alt="course Images" />
-          <Link href="" className={`course__btn course__btn--save ${courseDetails.id==1 ||courseDetails.id==6 || courseDetails.id==7? 'course__btn--active': ''}`}>
+          {/* <Link href="" className={`course__btn course__btn--save ${courseDetails.id==1 ||courseDetails.id==6 || courseDetails.id==7? 'course__btn--active': ''}`}>
             <FontAwesomeIcon icon={faBookmark} />
-          </Link>
+          </Link> */}
         </div>
         <div className="course__content">
           <div className="course__content-top">
@@ -27,7 +27,7 @@ const CourseCard = ({ courseDetails }) => {
           <h6>
             <Link href="/course-details">{courseDetails.title}</Link>
           </h6>
-          <div className="course__content-bottom">
+          {/* <div className="course__content-bottom">
             <Link href="/mentor-details">
               <img src={courseDetails.avatar} alt="avatar" />
               {courseDetails.avatarName}
@@ -36,7 +36,7 @@ const CourseCard = ({ courseDetails }) => {
               <del>${courseDetails.price}</del>{" "}
               <span> ${courseDetails.discountedPrice}</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

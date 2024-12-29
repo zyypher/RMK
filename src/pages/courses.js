@@ -55,7 +55,7 @@ const Courses = () => {
       <PageHeader
         title="Courses"
         subtitle="Courses"
-        image='images/bg/home1/2.png'
+        image='images/new/courses-banner.png'
       />
       
 
@@ -69,10 +69,11 @@ const Courses = () => {
             >
               <select name="cars" className="form-select">
                 <option value="">Filter By</option>
-                <option value="content">UI/UX</option>
-                <option value="web">Web Design</option>
-                <option value="graphic">Graphic</option>
-                <option value="seo">Social</option>
+                <option value="content">Food Safety</option>
+                <option value="web">Health and Safety</option>
+                <option value="graphic">Pest Control</option>
+                <option value="seo">HACCP & ISO Standards</option>
+                <option value="seo">Consultancy & Audits</option>
               </select>
             </div>
             <div
@@ -125,7 +126,7 @@ const Courses = () => {
 
       <div className="newsletter" data-aos="fade-up" data-aos-duration="800">
         <div className="container">
-        <Newsletter  title="Get free Pro memberships for your high school class"/>
+        <Newsletter  title="Reach Out for Expert Guidance Todays"/>
         </div>
       </div>
       <Footer />
