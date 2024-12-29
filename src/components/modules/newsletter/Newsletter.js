@@ -20,10 +20,10 @@ const Newsletter = ({ title, additionalClass }) => {
             >
               <h2>{title}</h2>
               <Link
-                href="/signin"
+                href="/contact"
                 className="trk-btn trk-btn--rounded trk-btn--primary1"
               >
-                Join With Us
+                Contact Us Now
               </Link>
             </div>
           </div>

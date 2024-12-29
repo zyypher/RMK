@@ -66,9 +66,8 @@ const Header = () => {
 
   return (
     <header
-      className={`header-section brand-1  ${
-        scrollPosition > 100 ? "header-fixed fadeInUp" : ""
-      } `}
+      className={`header-section brand-1  ${scrollPosition > 100 ? "header-fixed fadeInUp" : ""
+        } `}
     >
       <div className="header-bottom">
         <div className="container">
@@ -76,7 +75,7 @@ const Header = () => {
             <div className="header-start header-start--style1">
               <div className="logo">
                 <Link href="/">
-                  <img src="/images/logo/logo.png" alt="logo" />
+                  <img src="/images/logo/rmk-logo.png" alt="logo" style={{ width: '200px' }} />
                 </Link>
               </div>
               <div className="menu-area">
@@ -87,110 +86,35 @@ const Header = () => {
                       : "menu menu--style1"
                   }
                 >
-                  <li className="menu-item-has-children">
-                    <Link href="" onClick={toggleActive}>
-                      Homes{" "}
+                  <li>
+                    <Link href="/">
+                      Home
                     </Link>
-                    <ul className="submenu">
-                      <li>
-                        <Link href="/">Home 1</Link>
-                      </li>
-                      <li>
-                        <Link href="/index2">Home 2</Link>
-                      </li>
-                      <li>
-                        <Link href="/index3">Home 3</Link>
-                      </li>
-                      <li>
-                        <Link href="/index4">Home 4</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link href="" onClick={toggleActive}>
+                    <Link href="/about">
+                      About
+                    </Link>
+                    <Link href="/courses">
                       Courses
                     </Link>
-                    <ul className="submenu">
-                      <li>
-                        <Link href="/courses">Courses</Link>
-                      </li>
-                      <li>
-                        <Link href="/course-details">Courses Details</Link>
-                      </li>
-                      <li>
-                        <Link href="/course-category">Courses Category</Link>
-                      </li>
-                      <li>
-                        <Link href="/mentors">Mentors</Link>
-                      </li>
-                      <li>
-                        <Link href="/mentor-details">Mentor Details</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link href="" onClick={toggleActive}>
+                    <Link href="/blogs">
                       Blogs
                     </Link>
-                    <ul className="submenu">
-                      <li>
-                        <Link href="/blogs">Blogs</Link>
-                      </li>
-                      <li>
-                        <Link href="/blogs2">Blogs 2</Link>
-                      </li>
-                      <li>
-                        <Link href="/blog-details">Blog Details</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link href="" onClick={toggleActive}>
-                      Pages
-                    </Link>
-                    <ul className="submenu">
-                      <li>
-                        <Link href="/about">About Us</Link>
-                      </li>
-                      <li>
-                        <Link href="/gallery">Gallery</Link>
-                      </li>
-                      <li>
-                        <Link href="/cart">Cart</Link>
-                      </li>
-                      <li>
-                        <Link href="/check-out">Checkout</Link>
-                      </li>
-                      <li>
-                        <Link href="/signup">Sign Up</Link>
-                      </li>
-                      <li>
-                        <Link href="/signin">Sign In</Link>
-                      </li>
-                      <li>
-                        <Link href="/forget-password">Reset Password</Link>
-                      </li>
-                      <li>
-                        <Link href="/404">404 Error</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
                     <Link href="/contact">Contact Us</Link>
+
                   </li>
                 </ul>
               </div>
             </div>
             <div className="header-end">
               <div className="menu-area">
-                <div className="header-btn">
+                {/* <div className="header-btn">
                   <Link
                     href="/signup"
                     className="trk-btn trk-btn--rounded trk-btn--primary1"
                   >
                     <span>Sign Up</span>
                   </Link>
-                </div>
+                </div> */}
                 <div
                   className={
                     activeMenu

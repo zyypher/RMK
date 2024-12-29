@@ -54,18 +54,14 @@ const Footerthree = () => {
                                         </div>
                                         <div className="footer__links-content">
                                             <ul className="footer__linklist">
-                                                <li className="footer__linklist-item"> <Link href="courses">Courses</Link>
-                                                </li>
+
                                                 <li className="footer__linklist-item"> <Link href="about">About Us</Link>
                                                 </li>
-                                                <li className="footer__linklist-item"> <Link href="course-details">Content
-                                                    Writing</Link> </li>
-                                                <li className="footer__linklist-item"> <Link
-                                                    href="course-details">Management</Link> </li>
-                                                <li className="footer__linklist-item"> <Link href="course-details">Web
-                                                    Development</Link></li>
-                                                <li className="footer__linklist-item"> <Link href="course-details">Art &
-                                                    Design</Link>
+                                                <li className="footer__linklist-item"> <Link href="courses">Courses</Link>
+                                                </li>
+                                                <li className="footer__linklist-item"> <Link href="blogs">Blogs</Link>
+                                                </li>
+                                                <li className="footer__linklist-item"> <Link href="contact">Contact us</Link>
                                                 </li>
                                             </ul>
                                         </div>

@@ -36,7 +36,7 @@ const About = () => {
             <h2>Look into Featured Courses
             </h2>
             <p className="style2">
-            Explore our comprehensive training programs delivered at our state-of-the-art facilities. Gain valuable knowledge, learn from industry experts, and enhance your skills in a professional learning environment.
+              Explore our comprehensive training programs delivered at our state-of-the-art facilities. Gain valuable knowledge, learn from industry experts, and enhance your skills in a professional learning environment.
             </p>
           </div>
           <FeaturedSection />
@@ -45,7 +45,7 @@ const About = () => {
       <PopularCourse title="Our Popular Courses" />
       <MeetOurExpert additionalClass="padding-top" />
       <Testimonials />
-      <Newsletter additionalClass="padding-top" title="Get free Pro memberships for your high school class" />
+      <Newsletter additionalClass="padding-top" title="Reach Out for Expert Guidance Today" />
       <Footer />
     </>
   );

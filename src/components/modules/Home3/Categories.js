@@ -57,7 +57,7 @@ const Categories = () => {
                                                     <img src={item.icon} alt="course icon" />
                                                 </div>
                                                 <div className="categories__item-content">
-                                                    <Link href="/course-category" className="stretched-link active">{item.title}</Link>
+                                                    <div className="stretched-link active" style={{ fontWeight: 600}}>{item.title}</div>
                                                 </div>
                                             </div>
                                         </div>

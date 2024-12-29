@@ -11,6 +11,7 @@ import About from '../components/modules/Home3/About'
 import ExpertMentors from '../components/modules/Home3/ExpertMentors'
 import Blogs from '../components/modules/Home3/Blogs'
 import Students from '../components/modules/Home3/Students'
+import Footer from '../components/footers/Footer'
 
 export default function Home() {
   return (
@@ -23,10 +24,8 @@ export default function Home() {
       <About />
       <PopularCourse />
       <CounterThree />
-      {/* <ExpertMentors /> */}
-      {/* <Students /> */}
       <Blogs />
-      <Footerthree />
+      <Footer />
     </>
   )
 }

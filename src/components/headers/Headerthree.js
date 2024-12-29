@@ -108,8 +108,17 @@ const Headerthree = () => {
                 <div className="menu-area">
                   <ul className={`menu menu--style2 ${activeMenu ? "active" : ""}`}>
                     <li>
-                      <Link href="" onClick={toggleActive}>
+                      <Link href="/">
                         Home
+                      </Link>
+                      <Link href="/about">
+                        About
+                      </Link>
+                      <Link href="/courses">
+                        Courses
+                      </Link>
+                      <Link href="/blogs">
+                        Blogs
                       </Link>
                       {/* <ul className="submenu">
                         <li>
@@ -127,75 +136,6 @@ const Headerthree = () => {
                       </ul> */}
                     </li>
                     <li>
-                      <Link href="" onClick={toggleActive}>
-                        Courses
-                      </Link>
-                      <ul className="submenu">
-                        <li>
-                          <Link href="/courses">Courses</Link>
-                        </li>
-                        <li>
-                          <Link href="/course-details">Courses Details</Link>
-                        </li>
-                        <li>
-                          <Link href="/course-category">Courses Category</Link>
-                        </li>
-                        <li>
-                          <Link href="/mentors">Mentors</Link>
-                        </li>
-                        <li>
-                          <Link href="/mentor-details">Mentor Details</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <Link href="" onClick={toggleActive}>
-                        Blogs
-                      </Link>
-                      <ul className="submenu">
-                        <li>
-                          <Link href="/blogs">Blogs</Link>
-                        </li>
-                        <li>
-                          <Link href="/blogs2">Blogs 2</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-details">Blog Details</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <Link href="" onClick={toggleActive}>
-                        Pages
-                      </Link>
-                      <ul className="submenu">
-                        <li>
-                          <Link href="/about">About Us</Link>
-                        </li>
-                        <li>
-                          <Link href="/gallery">Gallery</Link>
-                        </li>
-                        <li>
-                          <Link href="/cart">Cart</Link>
-                        </li>
-                        <li>
-                          <Link href="/check-out">Checkout</Link>
-                        </li>
-                        <li>
-                          <Link href="/signup">Sign Up</Link>
-                        </li>
-                        <li>
-                          <Link href="/signin">Sign In</Link>
-                        </li>
-                        <li>
-                          <Link href="/forgot-password">Reset Password</Link>
-                        </li>
-                        <li>
-                          <Link href="/about">404 Error</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
                       <Link href="/contact">Contact Us</Link>
                     </li>
                   </ul>
@@ -203,7 +143,7 @@ const Headerthree = () => {
               </div>
               <div className="header-end">
                 <div className="menu-area">
-                  <div className="header-btn">
+                  {/* <div className="header-btn">
                     <Link
                       href=""
                       onClick={toggleSearchField}
@@ -219,7 +159,7 @@ const Headerthree = () => {
                         <FontAwesomeIcon icon={faArrowRight} />
                       </span>
                     </Link>
-                  </div>
+                  </div> */}
 
                   <div
                     className={`header-bar d-xl-none home3 ${activeMenu ? "active" : ""}`}

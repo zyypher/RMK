@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import ScrollToTop from "react-scroll-to-top";
-import { faFacebookF, faInstagram, faYoutube, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram, faYoutube, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
     <>
@@ -21,12 +21,10 @@ const Footer = () => {
                 <div className="col-xl-4 col-md-6">
                   <div className="footer__about">
                     <Link href="/" className="footer__about-logo">
-                      <img src="/images/logo/logo.png" alt="Logo" />
+                      <img src="/images/logo/rmk-logo.png" alt="Logo" style={{ width: '200px' }} />
                     </Link>
                     <p className="footer__about-moto">
-                      You minim mollit non deserunt ullamco est sit aliqua dolor
-                      do amet sint. Velit officia consequat duis enim velit
-                      mollit. Exercitation veniam consequat sunt nostrud amet.
+                      Empowering excellence through industry-leading training and consultancy services. With over 20 years of experience, we specialize in Food Safety, Health & Safety, and ISO certifications, delivering customized solutions for businesses across the UAE and beyond.
                     </p>
                   </div>
                 </div>
@@ -42,7 +40,7 @@ const Footer = () => {
                             <img src="/images/footer/1.svg" alt="icon" />
                             <div className="info">
                               <p className="m-0">
-                                4517 Washington Ave. Manchester, Kentucky 39495
+                                Single Business Tower, 206 Sheikh Zayed Rd, Business Bay, Dubai
                               </p>
                             </div>
                           </div>
@@ -52,11 +50,11 @@ const Footer = () => {
                             <img src="/images/footer/2.svg" alt="icon" />
                             <div className="info">
                               <Link href="mailto:support@thetork.com">
-                                support@thetork.com
+                                hello@rmkexperts.com
                               </Link>
                               <br />
                               <Link href="mailto:mail@thetork.com">
-                                mail@thetork.com
+                                admin@rmkexperts.com
                               </Link>
                             </div>
                           </div>
@@ -66,9 +64,9 @@ const Footer = () => {
                           <div className="footer__about-inner">
                             <img src="/images/footer/3.svg" alt="icon" />
                             <div className="info">
-                              <Link href="tel:+2075550119">(207) 555-0119</Link>
+                              <Link href="tel:+2075550119">+971 4 380 6674</Link>
                               <br />
-                              <Link href="tel:+7025550122">(702) 555-0122</Link>
+                              {/* <Link href="tel:+7025550122">(702) 555-0122</Link> */}
                             </div>
                           </div>
                         </li>
@@ -83,23 +81,13 @@ const Footer = () => {
                     </div>
                     <div className="footer__links-content">
                       <ul className="footer__linklist">
-                        <li className="footer__linklist-item">
-                          <Link href="/courses">Courses</Link>
+                        <li className="footer__linklist-item"> <Link href="about">About Us</Link>
                         </li>
-                        <li className="footer__linklist-item">
-                          <Link href="/about">About Us</Link>
+                        <li className="footer__linklist-item"> <Link href="courses">Courses</Link>
                         </li>
-                        <li className="footer__linklist-item">
-                          <Link href="/course-details">Content Writing</Link>
+                        <li className="footer__linklist-item"> <Link href="blogs">Blogs</Link>
                         </li>
-                        <li className="footer__linklist-item">
-                          <Link href="/course-details">Management</Link>
-                        </li>
-                        <li className="footer__linklist-item">
-                          <Link href="/course-details">Web Development</Link>
-                        </li>
-                        <li className="footer__linklist-item">
-                          <Link href="/course-details">Art & Design</Link>
+                        <li className="footer__linklist-item"> <Link href="contact">Contact us</Link>
                         </li>
                       </ul>
                     </div>
@@ -113,14 +101,14 @@ const Footer = () => {
                     <div className="footer__links-content">
                       <ul className="footer__linklist">
                         <li className="footer__linklist-item">
-                          <p className="m-0">Mon-Sat: 10:00AM - 4.00PM</p>
+                          <p className="m-0">Mon-Sat: 08:00AM - 5.00PM</p>
                         </li>
-                        <li className="footer__linklist-item">
+                        {/* <li className="footer__linklist-item">
                           <p className="m-0">Sunday: 10:00AM - 4.00PM</p>
-                        </li>
-                        <li className="footer__linklist-item">
+                        </li> */}
+                        {/* <li className="footer__linklist-item">
                           <p className="m-0">Friday: Close</p>
-                        </li>
+                        </li> */}
                       </ul>
                       <ul className="social mt-4">
                         <li className="social__item">
@@ -128,10 +116,10 @@ const Footer = () => {
                             href=""
                             className="social__link social__link--rounded1"
                           >
-                            <FontAwesomeIcon icon={faFacebookF} />
+                            <FontAwesomeIcon icon={faLinkedin} />
                           </Link>
                         </li>
-                        <li className="social__item">
+                        {/* <li className="social__item">
                           <Link
                             href=""
                             className="social__link social__link--rounded1"
@@ -154,7 +142,7 @@ const Footer = () => {
                           >
                             <FontAwesomeIcon icon={faTwitter} />
                           </Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -170,7 +158,7 @@ const Footer = () => {
                         © 2024 Copyright | All Rights Reserved.
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <ul className="footer__end-links">
                         <li className="footer__end-item">
                           <Link href="">Terms & Conditions</Link>
@@ -182,7 +170,7 @@ const Footer = () => {
                           <Link href=""> Sitemap </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
