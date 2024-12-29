@@ -14,7 +14,7 @@ const About = () => {
       <PageHeader
         title="About Us"
         subtitle="About Us"
-        image='images/bg/home1/1.png'
+        image='images/new/about-banner.png'
       />
 
       <section className="about about--style5 padding-top padding-bottom">
@@ -33,11 +33,10 @@ const About = () => {
             <div className="subtitle subtitle--style5 justify-content-center">
               <p className="mb-0">Our specialties</p>
             </div>
-            <h2>Look into Featured Courses</h2>
+            <h2>Look into Featured Courses
+            </h2>
             <p className="style2">
-              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt
-              qui esse pariatur duis deserunt mollit dolore cillum minim tempor
-              enim.2
+            Explore our comprehensive training programs delivered at our state-of-the-art facilities. Gain valuable knowledge, learn from industry experts, and enhance your skills in a professional learning environment.
             </p>
           </div>
           <FeaturedSection />

@@ -29,8 +29,10 @@ const Testimonials = () => {
     <section className='testimonial testimonial--style1 padding-top padding-bottom brand-1 '>
       <div className='container'>
         <div className="section-header text-center section-header--dark">
-          <h2>What Clients Have to Say About Us</h2>
-          <p className="style2">Interdum et malesuada fames ac ante ipsum</p>
+          <h2>What Our Clients Say
+          </h2>
+          <p className="style2">Hear from professionals and learners who have benefited from our expert training and consultancy programs. Their words inspire us to keep delivering excellence.
+          </p>
         </div>
         <div className="testimonial__wrapper">
           <Swiper
@@ -39,7 +41,7 @@ const Testimonials = () => {
             loop={true}
             autoplay={
               {
-                delay:2000,
+                delay:3000,
                 disableOnInteraction: false,
               }
             }
@@ -51,7 +53,7 @@ const Testimonials = () => {
 
           >
             {testimonials.map((item, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={`slide-${index}`}>
                 <div className="testimonial__item">
                   <div className="testimonial__item-inner">
                     <div className="testimonial__item-content">
@@ -80,13 +82,13 @@ const Testimonials = () => {
             spaceBetween={10}
             onSwiper={setThumbsSwiper}
           >
-            {testimonials.map((item, index) => (
+            {/* {testimonials.map((item, index) => (
               <SwiperSlide key={index} >
                 <div className="testimonial__author-thumb">
                   <img src={item.thumbnail} alt="author-image" />
                 </div>
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
         </div>
       </div>

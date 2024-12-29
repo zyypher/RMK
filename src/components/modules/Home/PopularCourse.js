@@ -236,8 +236,7 @@ const PopularCourse = ({ title }) => {
       <div className="container-fluid px-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
         <div className="section-header text-center section-header--dark">
           <h2>{title}</h2>
-          <p className="style4">Minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. duis enim velit
-            mollit. Exercitation veniam consequat.</p>
+          <p className="style4">Discover the most sought-after courses designed to equip you with the knowledge and skills needed to excel. From foundational training to advanced certifications, explore programs that cater to your career goals.</p>
         </div>
         <div className='course__wrapper'>
           <Swiper className='course__slider'

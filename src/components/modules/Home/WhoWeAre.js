@@ -11,18 +11,13 @@ const WhoWeAre = () => {
                         <div className="subtitle subtitle--style4">
                             <p className="mb-0">who we are</p>
                         </div>
-                        <h2 className="about-title">We are providing the best quality online courses. Our all
-                            instructors are high
-                            expert</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humor, or randomized words which don't
-                            look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                            need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                        <h2 className="about-title">RMK Experts is a certified leader in safety training and consultancy.</h2>
+                        <p>We specialize in Food Safety and Health & Safety programs designed to empower leaders, managers, and employees across the UAE, GCC, and the Middle East, enhancing safety, operational efficiency, and regulatory compliance.</p>
                     </div>
                     <div className="about__counter">
                         <div className="about__counter-item">
                             <h3>
-                                <Counter parentQuerySelector=".about__counter-item" start={200} end="256" delay={20} />+
+                                <Counter parentQuerySelector=".about__counter-item" start={200} end="700" delay={5} />K+
                             </h3>
                             <p>Enrolled Learner</p>
                         </div>
@@ -51,7 +46,7 @@ const WhoWeAre = () => {
                 <div className="about__thumb" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
                     <div className="about__thumb-inner">
                         <div className="about__thumb-image">
-                            <img src="/images/about/home1/2.png" alt="about-image"/>
+                            <img src="/images/new/about-1.png" alt="about-image"/>
                         </div>
                     </div>
                 </div>
