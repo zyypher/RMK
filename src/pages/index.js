@@ -24,7 +24,7 @@ export default function Home() {
       <About />
       <PopularCourse />
       <CounterThree />
-      <Blogs />
+      {/* <Blogs /> */}
       <Footer />
     </>
   )

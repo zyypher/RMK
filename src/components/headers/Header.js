@@ -1,126 +1,146 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-
 import { useRouter } from "next/router";
+
+const MOBILE_MAX = 991;
+
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [activeMenu, setActiveMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-  };
+  const mqCheck = useCallback(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.matchMedia(`(max-width: ${MOBILE_MAX}px)`).matches);
+    }
+  }, []);
+
+  const handleScroll = useCallback(() => {
+    setScrollPosition(window.scrollY || 0);
+  }, []);
+
+  const closeAllMenus = useCallback(() => {
+    const elements = document.querySelectorAll(".menu-item-has-children.open");
+    elements.forEach((item) => {
+      item.classList.remove("open");
+      const sub = item.querySelector(".submenu");
+      if (sub) sub.style.display = "none";
+    });
+  }, []);
+
+  function removeActive() {
+    const element = document.getElementById("menu");
+    if (element) element.classList.remove("active");
+    const icon = document.getElementById("icon");
+    if (icon) icon.classList.remove("active");
+  }
 
   useEffect(() => {
+    mqCheck();
+    window.addEventListener("resize", mqCheck);
     window.addEventListener("scroll", handleScroll, { passive: true });
     router.events.on("routeChangeStart", removeActive);
 
     return () => {
+      window.removeEventListener("resize", mqCheck);
       window.removeEventListener("scroll", handleScroll);
       router.events.off("routeChangeStart", removeActive);
     };
-  }, [router.events]);
-
-  function closeAllMenus() {
-    let elements = document.querySelectorAll(".menu-item-has-children.open");
-    elements.forEach((item) => {
-      item.classList.remove("open");
-      item.querySelector(".submenu").style.display = "none";
-    });
-  }
+  }, [handleScroll, mqCheck, router.events]);
 
   const toggleMenu = () => {
     setActiveMenu(!activeMenu);
     closeAllMenus();
   };
-  //............submenu...............
-  function removeActive() {
-    window.onload = function () {
-      const element = document.getElementById("menu");
-      if (element) {
-        element.classList.remove("active");
-      }
-      const icon = document.getElementById("icon");
-      if (icon) {
-        icon.classList.remove("active");
-      }
-    };
-  }
 
-  function toggleActive(event) {
-    event.preventDefault();
-    const mediaQuery = window.matchMedia("(max-width: 991px)");
-
-    if (mediaQuery.matches) {
-      // submenu open
-      event.currentTarget.parentElement.classList.toggle("open");
-      const submenu = event.currentTarget.nextElementSibling;
-      if (!submenu.style.display || submenu.style.display === "none") {
-        submenu.style.display = "block";
-      } else {
-        submenu.style.display = "none";
+  // Mobile: expand/collapse submenu
+  const onServicesClick = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      const li = e.currentTarget.parentElement;
+      if (!li) return;
+      li.classList.toggle("open");
+      const submenu = li.querySelector(".submenu");
+      if (submenu) {
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
       }
     }
-  }
+  };
+
+  // Desktop: hover behavior
+  const onServicesMouseEnter = (e) => {
+    if (!isMobile) {
+      const li = e.currentTarget;
+      li.classList.add("open");
+      const submenu = li.querySelector(".submenu");
+      if (submenu) submenu.style.display = "block";
+    }
+  };
+  const onServicesMouseLeave = (e) => {
+    if (!isMobile) {
+      const li = e.currentTarget;
+      li.classList.remove("open");
+      const submenu = li.querySelector(".submenu");
+      if (submenu) submenu.style.display = "none";
+    }
+  };
 
   return (
-    <header
-      className={`header-section brand-1  ${scrollPosition > 100 ? "header-fixed fadeInUp" : ""
-        } `}
-    >
+    <header className={`header-section brand-1 ${scrollPosition > 100 ? "header-fixed fadeInUp" : ""}`}>
       <div className="header-bottom">
         <div className="container">
           <div className="header-wrapper">
             <div className="header-start header-start--style1">
               <div className="logo">
                 <Link href="/">
-                  <img src="/images/logo/rmk-logo.png" alt="logo" style={{ width: '200px' }} />
+                  <img src="/images/logo/rmk-logo.png" alt="logo" style={{ width: "200px" }} />
                 </Link>
               </div>
               <div className="menu-area">
-                <ul
-                  className={
-                    activeMenu
-                      ? "menu menu--style1 active"
-                      : "menu menu--style1"
-                  }
-                >
+                <ul className={activeMenu ? "menu menu--style1 active" : "menu menu--style1"}>
                   <li>
-                    <Link href="/">
-                      Home
-                    </Link>
-                    <Link href="/about">
-                      About
-                    </Link>
-                    <Link href="/courses">
-                      Courses
-                    </Link>
-                    <Link href="/blogs">
-                      Blogs
-                    </Link>
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/about">About</Link>
+                  </li>
 
+                  {/* SERVICES dropdown */}
+                  <li
+                    className="menu-item-has-children"
+                    onMouseEnter={onServicesMouseEnter}
+                    onMouseLeave={onServicesMouseLeave}
+                  >
+                    <Link href="/services" onClick={onServicesClick}>
+                      Services
+                    </Link>
+                    <ul className="submenu" style={{ display: "none" }}>
+                      <li>
+                        <Link href="/services/training-courses">Training Courses</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/consultancy-implementation-audits">
+                          Consultancy, Implementation &amp; Audits
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/assessment">Assessment</Link>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <Link href="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
             </div>
+
             <div className="header-end">
               <div className="menu-area">
-                {/* <div className="header-btn">
-                  <Link
-                    href="/signup"
-                    className="trk-btn trk-btn--rounded trk-btn--primary1"
-                  >
-                    <span>Sign Up</span>
-                  </Link>
-                </div> */}
                 <div
-                  className={
-                    activeMenu
-                      ? "header-bar d-xl-none active"
-                      : "header-bar d-xl-none"
-                  }
+                  className={activeMenu ? "header-bar d-xl-none active" : "header-bar d-xl-none"}
                   onClick={toggleMenu}
                 >
                   <span></span>
@@ -129,6 +149,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
