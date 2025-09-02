@@ -85,7 +85,9 @@ const Footer = () => {
                         </li>
                         <li className="footer__linklist-item"> <Link href="courses">Courses</Link>
                         </li>
-                        <li className="footer__linklist-item"> <Link href="blogs">Blogs</Link>
+                        <li className="footer__linklist-item"> <Link href="consultancy">Consultancy</Link>
+                        </li>
+                        <li className="footer__linklist-item"> <Link href="assessment">Assessment</Link>
                         </li>
                         <li className="footer__linklist-item"> <Link href="contact">Contact us</Link>
                         </li>
