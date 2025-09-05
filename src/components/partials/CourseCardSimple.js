@@ -38,7 +38,7 @@ const makeSVGPlaceholder = (title = "Course") => {
     return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 };
 
-const CourseCardSimple = ({ data }) => {
+const CourseCardSimple = ({ data, onOpen }) => {
     const { tag, title, duration, description, image } = data || {};
     const [loaded, setLoaded] = useState(false);
     const [src, setSrc] = useState(image || STATIC_FALLBACK);
@@ -89,6 +89,13 @@ const CourseCardSimple = ({ data }) => {
                 <p className="mb-0 small" style={{ lineHeight: 1.6 }}>
                     {description}
                 </p>
+
+                <div className="mt-3">
+                    <button type="button" className="btn btn-outline-dark btn-sm"
+                        onClick={() => onOpen && onOpen(data)}>
+                        View Details
+                    </button>
+                </div>
 
                 {/* Ratings hidden as requested
         <div className="d-flex align-items-center mt-2">
