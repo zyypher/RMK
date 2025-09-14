@@ -6,8 +6,17 @@ import Newsletter from "../../components/modules/newsletter/Newsletter";
 import CourseCardSimple from "../../components/partials/CourseCardSimple";
 import { CATALOG } from "../../api/servicesCatalog";
 
-const ConsultancyPage = () => {
-  const { heading, items } = CATALOG.consultancy;
+export async function getStaticProps() {
+  const item = CATALOG?.consultancy ?? null;
+  if (!item) {
+    return { notFound: true };
+  }
+  return { props: { item } };
+}
+
+export default function ConsultancyPage({ item }) {
+  const heading = item?.heading ?? "Consultancy, Implementation & Audits";
+  const items = Array.isArray(item?.items) ? item.items : [];
 
   return (
     <>
@@ -21,8 +30,8 @@ const ConsultancyPage = () => {
       <section className="padding-top padding-bottom">
         <div className="container">
           <div className="row g-4">
-            {items.map((it) => (
-              <div key={it.id} className="col-md-6 col-lg-4">
+            {items.map((it, idx) => (
+              <div key={it?.id ?? idx} className="col-md-6 col-lg-4">
                 <CourseCardSimple data={it} />
               </div>
             ))}
@@ -39,6 +48,4 @@ const ConsultancyPage = () => {
       <Footer />
     </>
   );
-};
-
-export default ConsultancyPage;
+}

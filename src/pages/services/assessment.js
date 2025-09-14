@@ -6,8 +6,18 @@ import Newsletter from "../../components/modules/newsletter/Newsletter";
 import CourseCardSimple from "../../components/partials/CourseCardSimple";
 import { CATALOG } from "../../api/servicesCatalog";
 
-const AssessmentPage = () => {
-  const { heading, items } = CATALOG.assessment;
+export async function getStaticProps() {
+  const item = CATALOG?.assessment ?? null;
+  if (!item) {
+    // Clean 404 at build time instead of throwing
+    return { notFound: true };
+  }
+  return { props: { item } };
+}
+
+export default function AssessmentPage({ item }) {
+  const heading = item?.heading ?? "Assessment";
+  const items = Array.isArray(item?.items) ? item.items : [];
 
   return (
     <>
@@ -21,8 +31,8 @@ const AssessmentPage = () => {
       <section className="padding-top padding-bottom">
         <div className="container">
           <div className="row g-4">
-            {items.map((it) => (
-              <div key={it.id} className="col-md-6 col-lg-4">
+            {items.map((it, idx) => (
+              <div key={it?.id ?? idx} className="col-md-6 col-lg-4">
                 <CourseCardSimple data={it} />
               </div>
             ))}
@@ -39,6 +49,4 @@ const AssessmentPage = () => {
       <Footer />
     </>
   );
-};
-
-export default AssessmentPage;
+}
