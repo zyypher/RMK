@@ -1,38 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 RMK Experts — Official Training & Consultancy Website
 
-## Getting Started
+Welcome to the **RMK Experts** official website — a modern, responsive web platform representing a certified leader in safety training and consultancy.  
 
-First, run the development server:
+Built using **Next.js 13**, **Bootstrap 5**, and **React**, this website highlights RMK Experts’ services, programs, and certifications designed to empower organizations across the UAE, GCC, and the Middle East.
+
+---
+
+## 🏢 About RMK Experts
+
+> “Empowering Your Journey to Success.”
+
+**RMK Experts** is a certified leader in **Food Safety** and **Health & Safety** training and consultancy.  
+We specialize in delivering world-class programs that enable leaders, managers, and employees to enhance workplace safety, operational efficiency, and regulatory compliance.
+
+**Quick Stats**
+- 👨‍🎓 **700K+ Enrolled Learners**  
+- 🕒 **89 Finished Sessions**  
+- 💯 **99% Satisfaction Rate**  
+- 🏆 **80+ Awards Won**  
+
+---
+
+## 🖥️ Project Overview
+
+![RMK Experts Website Banner](./banner.png)
+
+The website serves as the public face of RMK Experts, providing detailed insights into the company’s services, training courses, certifications, and contact information.  
+It is optimized for SEO, mobile responsiveness, and performance to deliver a seamless user experience.
+
+### 🔹 Key Features
+
+- 🧭 **Dynamic Landing Page** — Modern, animated, and fully responsive layout.  
+- 🏅 **About & Services Pages** — Highlighting the brand’s mission, courses, and certifications.  
+- 📨 **Contact Form Integration** — Using Nodemailer for direct inquiries via email.  
+- 🧮 **Animated Counters & Stats** — Showcasing achievements and milestones.  
+- 🎞️ **Media Galleries & Sliders** — Built using **Swiper.js** and **AOS animations**.  
+- 🧰 **Bootstrap Components** — Consistent styling and responsive layouts.  
+- 🛠️ **Form Validation** — Implemented with **React Hook Form** and **Yup**.  
+- 📱 **Mobile-first Design** — Seamless experience across all devices.
+
+---
+
+## ⚙️ Tech Stack
+
+| Category | Technologies Used |
+|-----------|-------------------|
+| **Framework** | Next.js 13 |
+| **Frontend** | React 18, Bootstrap 5, SCSS |
+| **Animations** | AOS, Swiper.js, CountUp.js |
+| **Forms & Validation** | React Hook Form, Yup |
+| **Email Service** | Nodemailer |
+| **Icons** | Font Awesome, React Icons |
+| **Utilities** | Axios, jQuery |
+
+---
+
+## 🛠️ Getting Started
+
+Clone this repository and run it locally:
 
 ```bash
+git clone https://github.com/therealvishnuvinayan/rmkexperts-website.git
+cd rmkexperts-website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `api/hello.js`.
+## 📁 Folder Structure
 
-The `api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+.
+├── pages/              # Next.js pages (Home, About, Services, Contact)
+├── components/         # Reusable UI components
+├── public/             # Static images and media assets
+├── styles/             # SCSS styling and global theme
+└── package.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 📧 Contact Form Setup
 
-To learn more about Next.js, take a look at the following resources:
+This project uses **Nodemailer** for handling contact form submissions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add your credentials in `.env.local`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+EMAIL_TO=info@rmkexperts.com
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Deployed on **Vercel** for production, optimized with image compression and static rendering for fast load times.
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 👨‍💻 Developed By
+
+**Vishnu Vinayan**  
+Senior Full Stack Developer  
+🔗 [https://www.vishnuvinayan.com](https://www.vishnuvinayan.com)
+
+---
+
+© 2025 RMK Experts | All Rights Reserved  
+Built with ❤️ using Next.js, Bootstrap & React
